@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 36px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #3178c6;
+        }
+        .login-container .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .login-container .options a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+        .login-container .options a:hover {
+            text-decoration: underline;
+        }
+        .login-container .signup {
+            margin-top: 20px;
+        }
+        .login-container .signup a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+        .login-container .signup a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: red;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Instagram</h1>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <div>
+                <input type="text" id="username" placeholder="Username">
+                <span id="usernameError" class="error"></span>
+            </div>
+            <div>
+                <input type="password" id="password" placeholder="Password">
+                <span id="passwordError" class="error"></span>
+            </div>
+            <button type="submit">Log in</button>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="rememberMe"> Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="signup">
+                Don't have an account? <a href="#">Sign up here.</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="JS6.js"></script>
+</body>
+</html>

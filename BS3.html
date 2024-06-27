@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #5a5a5a;
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-light .navbar-nav .nav-item.active .nav-link {
+            color: #007bff;
+        }
+        .navbar-light .navbar-nav .btn-signup {
+            border: 1px solid #007bff;
+            color: #007bff;
+        }
+        .navbar-light .navbar-nav .btn-signup:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .pricing-header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .pricing-header h1 {
+            font-size: 2.5rem;
+        }
+        .card-deck .card {
+            border: 1px solid #dee2e6;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .card-header {
+            font-size: 1.25rem;
+            font-weight: bold;
+            background-color: #fff;
+            border-bottom: 0;
+            text-align: center;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .card-body .price {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card-body ul li {
+            margin: 0.5rem 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background-color: #f8f9fa;
+        }
+        .footer .row div {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Company name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Enterprise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-primary btn-signup" href="#">Sign up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Pricing Section -->
+<div class="container">
+    <div class="pricing-header">
+        <h1>Pricing</h1>
+        <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+
+    <div class="card-deck mb-3">
+        <!-- Free Tier -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                Free
+            </div>
+            <div class="card-body">
+                <h2 class="price">$0 <small class="text-muted">/ mo</small></h2>
+                <ul>
+                    <li>10 users included</li>
+                    <li>2 GB of storage</li>
+                    <li>Email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary btn-block">Sign up for free</button>
+            </div>
+        </div>
+
+        <!-- Pro Tier -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                Pro
+            </div>
+            <div class="card-body">
+                <h2 class="price">$15 <small class="text-muted">/ mo</small></h2>
+                <ul>
+                    <li>20 users included</li>
+                    <li>10 GB of storage</li>
+                    <li>Priority email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-primary btn-block">Get started</button>
+            </div>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                Enterprise
+            </div>
+            <div class="card-body">
+                <h2 class="price">$29 <small class="text-muted">/ mo</small></h2>
+                <ul>
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                </ul>
+                <button type="button" class="btn btn-primary btn-block">Contact us</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <small class="d-block mb-3 text-muted">&copy; 2017</small>
+            </div>
+            <div class="col-md-2">
+                <h5>Features</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Cool stuff</a></li>
+                    <li><a href="#">Random feature</a></li>
+                    <li><a href="#">Team feature</a></li>
+                    <li><a href="#">Stuff for developers</a></li>
+                    <li><a href="#">Another one</a></li>
+                    <li><a href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Resource</a></li>
+                    <li><a href="#">Resource name</a></li>
+                    <li><a href="#">Another resource</a></li>
+                    <li><a href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>About</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

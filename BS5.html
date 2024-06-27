@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            padding-left: 2.5rem;
+        }
+        .form-group .form-control:invalid {
+            border-color: red;
+        }
+        .form-group .form-control:invalid + .fa {
+            color: red;
+        }
+        .form-group .form-control:valid {
+            border-color: green;
+        }
+        .form-group .fa {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
+        .btn-send {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+        }
+        .btn-send:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="contactForm" novalidate>
+        <!-- First Name -->
+        <div class="form-group">
+            <i class="fa fa-user"></i>
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+            <i class="fa fa-user"></i>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <i class="fa fa-envelope"></i>
+            <input type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+            <i class="fa fa-phone"></i>
+            <input type="tel" class="form-control" id="phone" placeholder="(845)555-1212" required>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+            <i class="fa fa-home"></i>
+            <input type="text" class="form-control" id="address" placeholder="Address" required>
+        </div>
+
+        <!-- City -->
+        <div class="form-group">
+            <i class="fa fa-city"></i>
+            <input type="text" class="form-control" id="city" placeholder="City" required>
+        </div>
+
+        <!-- State -->
+        <div class="form-group">
+            <i class="fa fa-map-marker-alt"></i>
+            <select class="form-control" id="state" required>
+                <option value="" disabled selected>Please select your state</option>
+                <option value="CA">California</option>
+                <option value="NY">New York</option>
+                <option value="TX">Texas</option>
+                <!-- Add other states as needed -->
+            </select>
+        </div>
+
+        <!-- Hosting -->
+        <div class="form-group">
+            <label>Do you have hosting?</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes" required>
+                <label class="form-check-label" for="hostingYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no">
+                <label class="form-check-label" for="hostingNo">No</label>
+            </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="form-group">
+            <i class="fa fa-pencil-alt"></i>
+            <textarea class="form-control" id="projectDescription" placeholder="Project Description" rows="4" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-send">Send <i class="fa fa-paper-plane"></i></button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JS for validation -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        var form = this;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            var invalidFields = form.querySelectorAll(':invalid');
+            invalidFields.forEach(function(field) {
+                field.classList.add('is-invalid');
+            });
+        }
+        form.classList.add('was-validated');
+    }, false);
+</script>
+
+</body>
+</html>

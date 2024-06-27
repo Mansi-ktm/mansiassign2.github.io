@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnus Layout</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2; /* Light background for content area */
+        }
+        .header-bar {
+            background-color: #00a1e1;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-bar {
+            background-color: #c0c0c0;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .nav-bar a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-bar a:hover {
+            background-color: #bbb;
+            color: white;
+            border-radius: 5px;
+        }
+        .nav-right {
+            display: flex;
+            gap: 15px;
+        }
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 82px); /* Adjusting for header and nav bar height */
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: #e9ecef;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Header Bar -->
+    <div class="header-bar">
+        Ethnus Layout
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <div>
+            <a href="#">HOME</a>
+            <a href="#">MENU</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">SIGNUP</a>
+            <a href="#">LOGIN</a>
+        </div>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <div class="main-content">
+            <h1>Write your content here</h1>
+        </div>
+        <div class="sidebar">
+            <h3>This is</h3>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

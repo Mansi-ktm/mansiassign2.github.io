@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FFD700, #FF69B4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Registration form</h2>
+    <form name="registrationForm" onsubmit="return validateForm()">
+        First Name: <input type="text" name="firstName" id="firstName"><span id="firstNameError" class="error"></span><br>
+        Last Name: <input type="text" name="lastName" id="lastName"><span id="lastNameError" class="error"></span><br>
+        Email: <input type="email" name="email" id="email"><span id="emailError" class="error"></span><br>
+        Password: <input type="password" name="password" id="password"><span id="passwordError" class="error"></span><br>
+        Re-enter Password: <input type="password" name="confirmPassword" id="confirmPassword"><span id="confirmPasswordError" class="error"></span><br>
+        Gender: 
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <span id="genderError" class="error"></span><br>
+        Age: <input type="number" name="age" id="age"><span id="ageError" class="error"></span><br>
+        Phone Number: <input type="text" name="phoneNumber" id="phoneNumber"><span id="phoneNumberError" class="error"></span><br>
+        Address: <textarea name="address" id="address"></textarea><span id="addressError" class="error"></span><br>
+        State: <input type="text" name="state" id="state"><span id="stateError" class="error"></span><br>
+        Country: 
+        <select name="country" id="country">
+            <option value="">Choose your country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <!-- Add more countries as needed -->
+        </select><span id="countryError" class="error"></span><br>
+        Languages known:
+        <input type="checkbox" name="languages" value="English"> English
+        <input type="checkbox" name="languages" value="Kannada"> Kannada
+        <input type="checkbox" name="languages" value="Hindi"> Hindi
+        <input type="checkbox" name="languages" value="Telugu"> Telugu<br>
+        <input type="checkbox" name="declaration" id="declaration"> Hereby I declare all the given details are true <span id="declarationError" class="error"></span><br>
+        <input type="submit" value="REGISTER">
+    </form>
+    <script src="JS8.js"></script>
+</body>
+</html>
